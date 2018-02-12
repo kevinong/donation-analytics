@@ -1,3 +1,9 @@
+'''
+Kevin Ong
+kevinong@umich.edu
+Insight Data Engineering Coding Challenge
+'''
+
 import os
 import argparse
 import datetime
