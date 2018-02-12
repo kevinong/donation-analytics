@@ -12,8 +12,8 @@ The following is a quick summary of the algorithm:
 1. For each line in itcont.txt
 2. Parse the line and extracts useful information. If the information is malformed, skip and ignore the line (back to step 1)
 3. Identify if the donor is a repeated donor by checking if the donor's name and zip code is in `repeat_donors_dict`. If not, create a new mapping in `repeat_donors_dict` with `(name, zip_code)` as key, and the year of contribution as value, and continue to the next line in itcont.txt (back to step 1)
-4. Check if year of contribution is from a previous year. If yes, skip and ignore the record (back to step 1)
-5. Update the total amount of contributions and total number of transactions received by recipient from the contributor's zip code streamed in so far in this calendar year from repeat donors in a `repeat_donor_dict`. 
+4. Check if year of contribution is from a previous calender year. If yes, skip and ignore the record (back to step 1)
+5. Update the total amount of contributions and total number of transactions received by recipient from the contributor's zip code streamed in so far in this calendar year from repeat donors in a `repeat_donations_dict`. 
 6. Compute the n-th percentile value
 7. Write the information about contributions received by recipient from the contributor's zip code streamed in so far in this calendar year from repeat donors to repeat_donor.txt
 
